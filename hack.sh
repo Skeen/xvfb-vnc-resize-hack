@@ -47,7 +47,8 @@ echo "OK"
 # Run the game
 echo ""
 echo -e "Starting heroes3...\c"
-DISPLAY=:1 ./heroes3 -f 1>>$LOG_FILE 2>>$LOG_FILE &
+# Start with padsp to get sound
+DISPLAY=:1 padsp -S -M ./heroes3 -f 1>>$LOG_FILE 2>>$LOG_FILE &
 HEROES_PID=$(echo $!)
 echo "OK"
 
